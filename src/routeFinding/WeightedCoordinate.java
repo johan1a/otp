@@ -1,7 +1,8 @@
 package routeFinding;
+
 import java.util.Comparator;
 
-public class WeightedCoordinate {
+public class WeightedCoordinate implements Comparable<WeightedCoordinate> {
 	private Coordinate coordinate;
 	private float weight;
 
@@ -18,13 +19,19 @@ public class WeightedCoordinate {
 		return weight;
 	}
 
-	class FairComparator implements Comparator<WeightedCoordinate> {
-
-		@Override
-		public int compare(WeightedCoordinate o1, WeightedCoordinate o2) {
-			return Math.round(Math.abs(o1.getWeight() - 1)
-					- Math.abs(o2.getWeight() - 1));
-		}
+	public int compare(WeightedCoordinate w1, WeightedCoordinate w2) {
+		return (int) Math.round((w1.getWeight() - w2.getWeight()));
 	}
 
+	@Override
+	public int compareTo(WeightedCoordinate other) {
+		float otherWeight = other.getWeight();
+		if (weight == otherWeight) {
+			return 0;
+		} else if (weight < otherWeight) {
+			return -1;
+		} else {
+			return 1;
+		}
+	}
 }

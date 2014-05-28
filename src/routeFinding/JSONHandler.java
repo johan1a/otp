@@ -1,11 +1,4 @@
 package routeFinding;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-
-import org.apache.http.HttpEntity;
-
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
@@ -53,7 +46,6 @@ public class JSONHandler {
 				min = duration;
 			}
 		}
-
 		return new Route(best, min / 3600f);
 	}
 }

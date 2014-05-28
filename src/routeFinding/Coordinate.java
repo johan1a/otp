@@ -1,4 +1,5 @@
 package routeFinding;
+
 public class Coordinate {
 	private double lat, lon;
 
@@ -17,6 +18,6 @@ public class Coordinate {
 
 	@Override
 	public String toString() {
-		return "Coordinate [lat=" + lat + ", lon=" + lon + "]";
+		return lat + "," + lon;
 	}
 }

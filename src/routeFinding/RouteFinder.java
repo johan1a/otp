@@ -7,8 +7,10 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.PriorityQueue;
+import java.util.TreeSet;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
@@ -18,31 +20,29 @@ import org.apache.http.impl.client.HttpClients;
 
 public class RouteFinder {
 	private static final String SERVER_URL = "http://localhost:8080/otp/routers/default";
-	private static final String DEFAULT_OPTIONS = "&mode=TRANSIT,WALK&maxWalkDistance=750&arriveBy=false&showIntermediateStops=false&maxTransfers=0";
+	private static final String DEFAULT_OPTIONS = "&mode=TRANSIT,WALK&maxWalkDistance=750&arriveBy=false&showIntermediateStops=false&maxTransfers=0&clampInitialWait=0&numItineraries=1";
 	private static final int GRID_CELL_COUNT = 10;
 	private static final int GRID_RESOLUTION = 100; // meters per grid "cell"
-	private static final int ENVIRONMENTAL_MODE = 0, FAIR_MODE = 1;
-	private int currentMode = FAIR_MODE;
 	CloseableHttpClient httpclient;
 
-	public static void main(String[] args) {
-		RouteFinder rs = new RouteFinder();
-		rs.getOptimalCoordinate();
-	}
-
-	public void getOptimalCoordinate() {
+	public TreeSet<WeightedCoordinate> getRankedCoordinates(Coordinate userPos,
+			Coordinate friendPos) {
 		httpclient = HttpClients.custom().build();
-		Coordinate userPos = new Coordinate(55.59435243706736,
-				13.03253173828125);
-		Coordinate friendPos = new Coordinate(55.579120956833066,
-				12.962493896484375);
+		// Coordinate userPos = new Coordinate(55.59435243706736,
+		// 13.03253173828125);
+		// Coordinate friendPos = new Coordinate(55.579120956833066,
+		// 12.962493896484375);
 
-		Coordinate turningTorso = new Coordinate(55.613000, 12.976524);
-		Coordinate rosengard = new Coordinate(55.581963, 13.043815);
+		// Coordinate turningTorso = new Coordinate(55.613000, 12.976524);
+		// Coordinate rosengard = new Coordinate(55.581963, 13.043815);
 
-		userPos = new Coordinate(55.604855, 12.980987);
-		friendPos = rosengard;
+		// userPos = new Coordinate(55.600961, 12.985497);
+		// friendPos = rosengard;
 
+		// userPos = new Coordinate(55.568433, 12.967644);
+		// friendPos = new Coordinate(55.604523, 13.017082);
+
+		// userPos = turningTorso;
 		ArrayList<Coordinate> mapGrid = createGrid(userPos, friendPos);
 
 		HashMap<Coordinate, Float> userWeights = new HashMap<Coordinate, Float>();
@@ -52,11 +52,10 @@ public class RouteFinder {
 		System.out.println(mapGrid.size());
 
 		float userDuration, friendDuration;
-		PriorityQueue<WeightedCoordinate> queue = new PriorityQueue<WeightedCoordinate>();
-		HashMap<Coordinate, Float> multipliedWeights = new HashMap<Coordinate, Float>();
+		TreeSet<WeightedCoordinate> weightedCoordinates = new TreeSet<WeightedCoordinate>();
+
 		float bestWeight = Integer.MAX_VALUE, combinedWeight;
 		Coordinate optimalCoordinate = null;
-		Route bestRoute = null;
 		for (Coordinate coordinate : mapGrid) {
 			userRoute = searchForRoute(userPos, coordinate);
 			friendRoute = searchForRoute(friendPos, coordinate);
@@ -82,12 +81,13 @@ public class RouteFinder {
 						userWeights.get(coordinate),
 						friendWeights.get(coordinate));
 
-				multipliedWeights.put(coordinate, combinedWeight);
+				weightedCoordinates.add(new WeightedCoordinate(coordinate,
+						combinedWeight));
 
 				System.out.println(userDuration + " " + friendDuration + " "
 						+ coordinate + ", weight: " + combinedWeight);
 
-				if (evaluateWeights(combinedWeight, bestWeight)) {
+				if (combinedWeight < bestWeight) {
 					optimalCoordinate = coordinate;
 					bestWeight = combinedWeight;
 				}
@@ -95,21 +95,15 @@ public class RouteFinder {
 		}
 		System.out.println("Optimal coordinate: " + optimalCoordinate
 				+ ", weight " + bestWeight);
-	}
 
-	/* Returns true if combinedWeight is better than currentBest */
-	private boolean evaluateWeights(float combinedWeight, float currentBest) {
-		if (currentMode == FAIR_MODE) {
-			return Math.abs(combinedWeight - 1) < Math.abs(currentBest - 1);
-		}
-		return combinedWeight < currentBest;
+		System.out.println("From set: "
+				+ weightedCoordinates.first().getCoordinate() + " "
+				+ weightedCoordinates.first().getWeight());
+		return weightedCoordinates;
 	}
 
 	private float calculateCombinedWeight(float w1, Float w2) {
-		if (currentMode == FAIR_MODE) {
-			return w1 / w2;
-		}
-		return w1 * w2;
+		return Math.abs(1 - w1 / w2) * (w1 * w2) * (w1 * w2);
 	}
 
 	private ArrayList<Coordinate> createGrid(Coordinate origin,
@@ -191,4 +185,5 @@ public class RouteFinder {
 		return dateFormat.format(cal.getTime()).toString()
 				.replaceAll(" ", "&date=");
 	}
+
 }
