@@ -2,6 +2,8 @@ package routeFinding;
 
 import java.util.Comparator;
 
+import com.google.gson.JsonObject;
+
 public class WeightedCoordinate implements Comparable<WeightedCoordinate> {
 	private Coordinate coordinate;
 	private float weight;
@@ -34,4 +36,9 @@ public class WeightedCoordinate implements Comparable<WeightedCoordinate> {
 			return 1;
 		}
 	}
+
+	public JsonObject getInnerObject() {
+		return coordinate.getInnerObject();
+	}
+
 }

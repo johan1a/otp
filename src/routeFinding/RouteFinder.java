@@ -7,9 +7,8 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Comparator;
 import java.util.HashMap;
-import java.util.PriorityQueue;
+import java.util.List;
 import java.util.TreeSet;
 
 import org.apache.http.HttpEntity;
@@ -25,38 +24,37 @@ public class RouteFinder {
 	private static final int GRID_RESOLUTION = 100; // meters per grid "cell"
 	CloseableHttpClient httpclient;
 
-	public TreeSet<WeightedCoordinate> getRankedCoordinates(Coordinate userPos,
+	/*
+	 * Returns a sorted list of cafes that result in the shortest total travel
+	 * path.
+	 */
+	public TreeSet<WeightedCoordinate> getCafesInMiddle(Coordinate userPos,
 			Coordinate friendPos) {
+		return getBestMiddlePoints(userPos, friendPos,
+				JsonHandler.getCafeCoords());
+	}
+
+	public TreeSet<WeightedCoordinate> getMeetingPointByGrid(
+			Coordinate userPos, Coordinate friendPos) {
+		return getBestMiddlePoints(userPos, friendPos,
+				createGrid(userPos, friendPos));
+	}
+
+	public TreeSet<WeightedCoordinate> getBestMiddlePoints(Coordinate userPos,
+			Coordinate friendPos, List<? extends Coordinate> pointsToCheck) {
 		httpclient = HttpClients.custom().build();
-		// Coordinate userPos = new Coordinate(55.59435243706736,
-		// 13.03253173828125);
-		// Coordinate friendPos = new Coordinate(55.579120956833066,
-		// 12.962493896484375);
-
-		// Coordinate turningTorso = new Coordinate(55.613000, 12.976524);
-		// Coordinate rosengard = new Coordinate(55.581963, 13.043815);
-
-		// userPos = new Coordinate(55.600961, 12.985497);
-		// friendPos = rosengard;
-
-		// userPos = new Coordinate(55.568433, 12.967644);
-		// friendPos = new Coordinate(55.604523, 13.017082);
-
-		// userPos = turningTorso;
-		ArrayList<Coordinate> mapGrid = createGrid(userPos, friendPos);
 
 		HashMap<Coordinate, Float> userWeights = new HashMap<Coordinate, Float>();
 		HashMap<Coordinate, Float> friendWeights = new HashMap<Coordinate, Float>();
 
 		Route userRoute, friendRoute;
-		System.out.println(mapGrid.size());
 
 		float userDuration, friendDuration;
 		TreeSet<WeightedCoordinate> weightedCoordinates = new TreeSet<WeightedCoordinate>();
 
 		float bestWeight = Integer.MAX_VALUE, combinedWeight;
 		Coordinate optimalCoordinate = null;
-		for (Coordinate coordinate : mapGrid) {
+		for (Coordinate coordinate : pointsToCheck) {
 			userRoute = searchForRoute(userPos, coordinate);
 			friendRoute = searchForRoute(friendPos, coordinate);
 			if (userRoute != null && friendRoute != null) {
@@ -99,11 +97,14 @@ public class RouteFinder {
 		System.out.println("From set: "
 				+ weightedCoordinates.first().getCoordinate() + " "
 				+ weightedCoordinates.first().getWeight());
+
+		System.out.println(weightedCoordinates.size());
 		return weightedCoordinates;
 	}
 
 	private float calculateCombinedWeight(float w1, Float w2) {
-		return Math.abs(1 - w1 / w2) * (w1 * w2) * (w1 * w2);
+		return Math.abs(1 - w1 / w2) * (w1 * w2);
+		// return Math.abs(1 - w1 / w2);
 	}
 
 	private ArrayList<Coordinate> createGrid(Coordinate origin,
@@ -146,7 +147,7 @@ public class RouteFinder {
 		try {
 			CloseableHttpResponse response = httpclient.execute(httpget);
 			// System.out.println(response.getStatusLine());
-			route = JSONHandler.parseShortestRoute(responseToString(response));
+			route = JsonHandler.parseShortestRoute(responseToString(response));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -185,5 +186,4 @@ public class RouteFinder {
 		return dateFormat.format(cal.getTime()).toString()
 				.replaceAll(" ", "&date=");
 	}
-
 }

@@ -11,6 +11,7 @@ import java.util.TreeSet;
 import org.apache.http.client.methods.HttpPost;
 
 import routeFinding.Coordinate;
+import routeFinding.JsonHandler;
 import routeFinding.RouteFinder;
 import routeFinding.WeightedCoordinate;
 
@@ -32,18 +33,10 @@ public class Server {
 			server.createContext("/", new MyHandler());
 			server.setExecutor(null);
 			server.start();
-
-			HttpPost httpPost = new HttpPost(
-					"http://www.openstreetmap.org/#map=11/55.5832/13.1383");
-			System.out.println(httpPost.toString());
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 
-	}
-
-	public static void main(String[] args) throws Exception {
-		Server server = new Server();
 	}
 
 	class MyHandler implements HttpHandler {
@@ -53,22 +46,13 @@ public class Server {
 			List<Coordinate> coordinates = parseCoordinates(uri.getPath());
 
 			TreeSet<WeightedCoordinate> weightedCoordinates = routeFinder
-					.getRankedCoordinates(coordinates.get(0),
-							coordinates.get(1));
+					.getCafesInMiddle(coordinates.get(0), coordinates.get(1));
 
-			JsonObject jsonObject = new JsonObject();
-			JsonObject innerObject;
-			int i = 0;
-			for (WeightedCoordinate coordinate : weightedCoordinates) {
-				innerObject = new JsonObject();
-				innerObject.addProperty("coordinate", coordinate
-						.getCoordinate().toString());
-
-				jsonObject.add(Integer.toString(i++), innerObject);
-			}
-
-			String response = jsonObject.toString();
-
+			String response = JsonHandler.createJsonObject(weightedCoordinates)
+					.toString();
+			
+			System.out.println(response);
+			
 			Headers h = t.getResponseHeaders();
 			h.add("Content-Type", "application/json; charset=UTF-8");
 			h.add("Access-Control-Allow-Origin", "*");
@@ -82,6 +66,7 @@ public class Server {
 			os.write(response.getBytes("UTF-8"));
 			os.close();
 		}
+
 	}
 
 	public static List<Coordinate> parseCoordinates(String path) {
@@ -100,5 +85,9 @@ public class Server {
 
 		}
 		return result;
+	}
+
+	public static void main(String[] args) throws Exception {
+		Server server = new Server();
 	}
 }
