@@ -8,65 +8,85 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.TreeSet;
 
-import org.apache.http.client.methods.HttpPost;
+import pathFinding.PathFinder;
+import util.JsonHandler;
 
-import routeFinding.Coordinate;
-import routeFinding.JsonHandler;
-import routeFinding.RouteFinder;
-import routeFinding.WeightedCoordinate;
-
-import com.google.gson.JsonObject;
 import com.sun.net.httpserver.Headers;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import com.sun.net.httpserver.HttpServer;
 
+import coordinate.Coordinate;
+import coordinate.WeightedCoordinate;
+
 //http://localhost:9000/
 public class Server {
-	RouteFinder routeFinder;
+	PathFinder routeFinder;
 
 	public Server() {
 		HttpServer server;
 		try {
-			server = HttpServer.create(new InetSocketAddress(9000), 0);
-			routeFinder = new RouteFinder();
+			server = HttpServer.create(new InetSocketAddress(10000), 0);
+			routeFinder = new PathFinder();
 			server.createContext("/", new MyHandler());
 			server.setExecutor(null);
 			server.start();
+			System.out.println("Server online!");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
 	}
 
 	class MyHandler implements HttpHandler {
-		public void handle(HttpExchange t) throws IOException {
+		public void handle(HttpExchange t) {
 			URI uri = t.getRequestURI();
 
 			List<Coordinate> coordinates = parseCoordinates(uri.getPath());
+			String response;
+			if (coordinates.size() == 2) {
 
-			TreeSet<WeightedCoordinate> weightedCoordinates = routeFinder
-					.getCafesInMiddle(coordinates.get(0), coordinates.get(1));
+				System.out.println("Searching for a meeting point...");
+				long time = System.currentTimeMillis();
+				TreeSet<WeightedCoordinate> weightedCoordinates = routeFinder
+						.getCafesInMiddle(coordinates.get(0),
+								coordinates.get(1));
+				long executionTime = (System.currentTimeMillis() - time) / 1000;
+				System.out.println("Completed in " + executionTime
+						+ " seconds.");
 
-			String response = JsonHandler.createJsonObject(weightedCoordinates)
-					.toString();
-			
-			System.out.println(response);
-			
+				response = JsonHandler.createJsonArray(weightedCoordinates)
+						.toString();
+
+				System.out.println("Response: " + response);
+
+			} else {
+				response = "Error: Invalid URL";
+			}
+
 			Headers h = t.getResponseHeaders();
-			h.add("Content-Type", "application/json; charset=UTF-8");
+			h.add("Content-Type", "application/json; charset=utf-8");
 			h.add("Access-Control-Allow-Origin", "*");
 			h.add("Access-Control-Allow-Headers",
 					"Origin, X-Requested-With, Content-Type, Accept");
 			h.add("Access-Control-Allow-Methods", "POST, GET, OPTIONS");
 
-			t.sendResponseHeaders(200, response.length());
-			OutputStream os = t.getResponseBody();
-
-			os.write(response.getBytes("UTF-8"));
-			os.close();
+			OutputStream os = null;
+			try {
+				t.sendResponseHeaders(200, response.getBytes("utf-8").length);
+				os = t.getResponseBody();
+				os.write(response.getBytes("utf-8"));
+			} catch (IOException e) {
+				e.printStackTrace();
+			} finally {
+				try {
+					if (os != null) {
+						os.close();
+					}
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
 		}
-
 	}
 
 	public static List<Coordinate> parseCoordinates(String path) {
@@ -82,12 +102,13 @@ public class Server {
 				result.add(new Coordinate(lat, lon));
 			}
 		} catch (NumberFormatException e) {
-
+			System.err.println("Wrong URL format!");
 		}
 		return result;
 	}
 
 	public static void main(String[] args) throws Exception {
+		@SuppressWarnings("unused")
 		Server server = new Server();
 	}
 }

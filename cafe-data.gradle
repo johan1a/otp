@@ -1,0 +1,1316 @@
+{
+  "osm": {
+    "-version": "0.6",
+    "-generator": "Overpass API",
+    "note": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+    "meta": { "-osm_base": "2014-05-28T12:05:02Z" },
+    "node": [
+      {
+        "-id": "417994872",
+        "-lat": "55.6011294",
+        "-lon": "13.0099169",
+        "tag": [
+          {
+            "-k": "amenity",
+            "-v": "cafe"
+          },
+          {
+            "-k": "cuisine",
+            "-v": "coffee_shop"
+          },
+          {
+            "-k": "name",
+            "-v": "Element"
+          }
+        ]
+      },
+      {
+        "-id": "417994873",
+        "-lat": "55.6014506",
+        "-lon": "13.0107404",
+        "tag": [
+          {
+            "-k": "amenity",
+            "-v": "cafe"
+          },
+          {
+            "-k": "cuisine",
+            "-v": "coffee_shop"
+          },
+          {
+            "-k": "name",
+            "-v": "Pappas flickor"
+          }
+        ]
+      },
+      {
+        "-id": "417994874",
+        "-lat": "55.6001929",
+        "-lon": "13.0111561",
+        "tag": [
+          {
+            "-k": "amenity",
+            "-v": "cafe"
+          },
+          {
+            "-k": "name",
+            "-v": "Selma"
+          }
+        ]
+      },
+      {
+        "-id": "444822081",
+        "-lat": "55.6081888",
+        "-lon": "13.0108216",
+        "tag": [
+          {
+            "-k": "amenity",
+            "-v": "cafe"
+          },
+          {
+            "-k": "cuisine",
+            "-v": "sandwich;ice_cream"
+          },
+          {
+            "-k": "name",
+            "-v": "Dolce Sicilia"
+          }
+        ]
+      },
+      {
+        "-id": "444823481",
+        "-lat": "55.6045449",
+        "-lon": "13.0028526",
+        "tag": [
+          {
+            "-k": "amenity",
+            "-v": "cafe"
+          },
+          {
+            "-k": "cuisine",
+            "-v": "coffee_shop"
+          },
+          {
+            "-k": "name",
+            "-v": "Lilla Kafferosteriet"
+          }
+        ]
+      },
+      {
+        "-id": "444832887",
+        "-lat": "55.6067781",
+        "-lon": "13.0002635",
+        "tag": [
+          {
+            "-k": "amenity",
+            "-v": "cafe"
+          },
+          {
+            "-k": "name",
+            "-v": "Wayne's Coffee"
+          },
+          {
+            "-k": "operator",
+            "-v": "Wayne's Coffee"
+          }
+        ]
+      },
+      {
+        "-id": "444845100",
+        "-lat": "55.6087207",
+        "-lon": "12.9995291",
+        "tag": [
+          {
+            "-k": "amenity",
+            "-v": "cafe"
+          },
+          {
+            "-k": "cuisine",
+            "-v": "coffee_shop"
+          },
+          {
+            "-k": "internet_access",
+            "-v": "wlan"
+          },
+          {
+            "-k": "internet_access:fee",
+            "-v": "no"
+          },
+          {
+            "-k": "name",
+            "-v": "Espresso House"
+          },
+          {
+            "-k": "operator",
+            "-v": "Espresso House"
+          },
+          {
+            "-k": "source",
+            "-v": "survey"
+          }
+        ]
+      },
+      {
+        "-id": "444845105",
+        "-lat": "55.6106266",
+        "-lon": "12.9729934",
+        "tag": [
+          {
+            "-k": "amenity",
+            "-v": "cafe"
+          },
+          {
+            "-k": "name",
+            "-v": "Espresso House"
+          },
+          {
+            "-k": "operator",
+            "-v": "Espresso House"
+          }
+        ]
+      },
+      {
+        "-id": "444854614",
+        "-lat": "55.6016491",
+        "-lon": "13.0003865",
+        "tag": [
+          {
+            "-k": "amenity",
+            "-v": "cafe"
+          },
+          {
+            "-k": "name",
+            "-v": "Espresso House"
+          }
+        ]
+      },
+      {
+        "-id": "444858581",
+        "-lat": "55.6057983",
+        "-lon": "13.0014718",
+        "tag": [
+          {
+            "-k": "amenity",
+            "-v": "cafe"
+          },
+          {
+            "-k": "name",
+            "-v": "Mäster Hans"
+          }
+        ]
+      },
+      {
+        "-id": "444870966",
+        "-lat": "55.6078793",
+        "-lon": "13.0075392",
+        "tag": [
+          {
+            "-k": "amenity",
+            "-v": "cafe"
+          },
+          {
+            "-k": "name",
+            "-v": "Pâtisserie S:t Gertrud"
+          }
+        ]
+      },
+      {
+        "-id": "444880200",
+        "-lat": "55.6064603",
+        "-lon": "13.0206018",
+        "tag": [
+          {
+            "-k": "amenity",
+            "-v": "cafe"
+          },
+          {
+            "-k": "cuisine",
+            "-v": "african"
+          },
+          {
+            "-k": "name",
+            "-v": "African way"
+          }
+        ]
+      },
+      {
+        "-id": "444880324",
+        "-lat": "55.6065088",
+        "-lon": "13.0204194",
+        "tag": [
+          {
+            "-k": "amenity",
+            "-v": "cafe"
+          },
+          {
+            "-k": "name",
+            "-v": "La Porta"
+          }
+        ]
+      },
+      {
+        "-id": "445846438",
+        "-lat": "55.5858153",
+        "-lon": "13.0064160",
+        "tag": [
+          {
+            "-k": "amenity",
+            "-v": "cafe"
+          },
+          {
+            "-k": "name",
+            "-v": "Wallins konditori"
+          }
+        ]
+      },
+      {
+        "-id": "472675243",
+        "-lat": "55.5596357",
+        "-lon": "12.9347897",
+        "tag": [
+          {
+            "-k": "amenity",
+            "-v": "cafe"
+          },
+          {
+            "-k": "name",
+            "-v": "Skånegården"
+          }
+        ]
+      },
+      {
+        "-id": "514143378",
+        "-lat": "55.6093530",
+        "-lon": "12.9961912",
+        "tag": [
+          {
+            "-k": "amenity",
+            "-v": "cafe"
+          },
+          {
+            "-k": "name",
+            "-v": "Barista Fair Trade Coffee"
+          },
+          {
+            "-k": "name:en",
+            "-v": "Barista Fair Trade Coffee"
+          },
+          {
+            "-k": "opening_hours",
+            "-v": "Mo - Fr 08:00-17:00"
+          }
+        ]
+      },
+      {
+        "-id": "536820937",
+        "-lat": "55.5915278",
+        "-lon": "13.0097115",
+        "tag": [
+          {
+            "-k": "amenity",
+            "-v": "cafe"
+          },
+          {
+            "-k": "name",
+            "-v": "Simrishamnsgatan 3"
+          },
+          {
+            "-k": "wheelchair",
+            "-v": "limited"
+          }
+        ]
+      },
+      {
+        "-id": "536833709",
+        "-lat": "55.5910428",
+        "-lon": "13.0087673",
+        "tag": [
+          {
+            "-k": "amenity",
+            "-v": "cafe"
+          },
+          {
+            "-k": "name",
+            "-v": "Kaffebaren"
+          },
+          {
+            "-k": "wheelchair",
+            "-v": "no"
+          }
+        ]
+      },
+      {
+        "-id": "577312628",
+        "-lat": "55.5923614",
+        "-lon": "13.0101122",
+        "tag": [
+          {
+            "-k": "addr:city",
+            "-v": "Malmö"
+          },
+          {
+            "-k": "addr:country",
+            "-v": "SE"
+          },
+          {
+            "-k": "addr:housenumber",
+            "-v": "16"
+          },
+          {
+            "-k": "addr:street",
+            "-v": "Kristianstadsgatan"
+          },
+          {
+            "-k": "amenity",
+            "-v": "cafe"
+          },
+          {
+            "-k": "name",
+            "-v": "Glassfabriken"
+          },
+          {
+            "-k": "opening_hours",
+            "-v": "Tu-Su 11:00-20:00"
+          },
+          {
+            "-k": "wheelchair",
+            "-v": "limited"
+          }
+        ]
+      },
+      {
+        "-id": "625987389",
+        "-lat": "55.6112939",
+        "-lon": "12.9943151",
+        "tag": [
+          {
+            "-k": "amenity",
+            "-v": "cafe"
+          },
+          {
+            "-k": "name",
+            "-v": "Välfärden"
+          },
+          {
+            "-k": "wheelchair",
+            "-v": "limited"
+          }
+        ]
+      },
+      {
+        "-id": "897688921",
+        "-lat": "55.5848529",
+        "-lon": "13.0176798",
+        "tag": [
+          {
+            "-k": "amenity",
+            "-v": "cafe"
+          },
+          {
+            "-k": "name",
+            "-v": "Arena 305"
+          }
+        ]
+      },
+      {
+        "-id": "1176790954",
+        "-lat": "55.5961800",
+        "-lon": "13.0034500",
+        "tag": [
+          {
+            "-k": "amenity",
+            "-v": "cafe"
+          },
+          {
+            "-k": "name",
+            "-v": "Mocca"
+          },
+          {
+            "-k": "wheelchair",
+            "-v": "no"
+          },
+          {
+            "-k": "wheelchair:description",
+            "-v": "3 steps to get in, no accessable bathroom"
+          }
+        ]
+      },
+      {
+        "-id": "1176797496",
+        "-lat": "55.6049603",
+        "-lon": "12.9993200",
+        "tag": [
+          {
+            "-k": "addr:city",
+            "-v": "Malmö"
+          },
+          {
+            "-k": "addr:housenumber",
+            "-v": "11"
+          },
+          {
+            "-k": "addr:postcode",
+            "-v": "21134"
+          },
+          {
+            "-k": "addr:street",
+            "-v": "Skomakaregatan"
+          },
+          {
+            "-k": "amenity",
+            "-v": "cafe"
+          },
+          {
+            "-k": "name",
+            "-v": "Folk å Rock"
+          },
+          {
+            "-k": "phone",
+            "-v": "+46 40 78103"
+          },
+          {
+            "-k": "website",
+            "-v": "http://folkarock.se/"
+          },
+          {
+            "-k": "wheelchair",
+            "-v": "yes"
+          }
+        ]
+      },
+      {
+        "-id": "1208663511",
+        "-lat": "55.5879883",
+        "-lon": "13.0171158",
+        "tag": [
+          {
+            "-k": "amenity",
+            "-v": "cafe"
+          },
+          {
+            "-k": "name",
+            "-v": "Tryckeriet"
+          }
+        ]
+      },
+      {
+        "-id": "1305674405",
+        "-lat": "55.6070859",
+        "-lon": "13.0237506",
+        "tag": [
+          {
+            "-k": "amenity",
+            "-v": "cafe"
+          },
+          {
+            "-k": "cuisine",
+            "-v": "coffee_shop"
+          },
+          {
+            "-k": "email",
+            "-v": "entre@redfellas.se"
+          },
+          {
+            "-k": "name",
+            "-v": "Redfellas Juicebar"
+          },
+          {
+            "-k": "phone",
+            "-v": "040 - 18 66 18"
+          },
+          {
+            "-k": "website",
+            "-v": "www.redfellas.se"
+          }
+        ]
+      },
+      {
+        "-id": "1309334554",
+        "-lat": "55.5996979",
+        "-lon": "13.0055497",
+        "tag": [
+          {
+            "-k": "addr:city",
+            "-v": "Malmö"
+          },
+          {
+            "-k": "addr:country",
+            "-v": "SE"
+          },
+          {
+            "-k": "addr:housenumber",
+            "-v": "2 a"
+          },
+          {
+            "-k": "addr:postcode",
+            "-v": "211 49"
+          },
+          {
+            "-k": "addr:street",
+            "-v": "Kungsgatan"
+          },
+          {
+            "-k": "amenity",
+            "-v": "cafe"
+          },
+          {
+            "-k": "cuisine",
+            "-v": "regional"
+          },
+          {
+            "-k": "name",
+            "-v": "Kafé Kungsgatan"
+          },
+          {
+            "-k": "website",
+            "-v": "http://www.kungsg.se"
+          }
+        ]
+      },
+      {
+        "-id": "1309356207",
+        "-lat": "55.6002337",
+        "-lon": "13.0046313",
+        "tag": [
+          {
+            "-k": "addr:city",
+            "-v": "Malmö"
+          },
+          {
+            "-k": "addr:country",
+            "-v": "SE"
+          },
+          {
+            "-k": "addr:housenumber",
+            "-v": "11"
+          },
+          {
+            "-k": "addr:postcode",
+            "-v": "211 41"
+          },
+          {
+            "-k": "addr:street",
+            "-v": "Kaptensgatan"
+          },
+          {
+            "-k": "amenity",
+            "-v": "cafe"
+          },
+          {
+            "-k": "name",
+            "-v": "Café 2000"
+          },
+          {
+            "-k": "website",
+            "-v": "http://www.cafe2000.se/"
+          }
+        ]
+      },
+      {
+        "-id": "1359118612",
+        "-lat": "55.5509315",
+        "-lon": "13.0039240",
+        "tag": [
+          {
+            "-k": "amenity",
+            "-v": "cafe"
+          },
+          {
+            "-k": "name",
+            "-v": "Kleins Mat"
+          },
+          {
+            "-k": "website",
+            "-v": "http://www.kleinsmat.se"
+          }
+        ]
+      },
+      {
+        "-id": "1488710555",
+        "-lat": "55.5969410",
+        "-lon": "13.0137563",
+        "tag": [
+          {
+            "-k": "amenity",
+            "-v": "cafe"
+          },
+          {
+            "-k": "name",
+            "-v": "Mys"
+          }
+        ]
+      },
+      {
+        "-id": "1624179472",
+        "-lat": "55.6074680",
+        "-lon": "13.0246206",
+        "tag": [
+          {
+            "-k": "amenity",
+            "-v": "cafe"
+          },
+          {
+            "-k": "cuisine",
+            "-v": "coffee_shop"
+          },
+          {
+            "-k": "name",
+            "-v": "Barista"
+          }
+        ]
+      },
+      {
+        "-id": "1624179498",
+        "-lat": "55.6055065",
+        "-lon": "13.0263175",
+        "tag": [
+          {
+            "-k": "amenity",
+            "-v": "cafe"
+          },
+          {
+            "-k": "name",
+            "-v": "Café Grannen"
+          }
+        ]
+      },
+      {
+        "-id": "1669560489",
+        "-lat": "55.5954240",
+        "-lon": "12.9857669",
+        "tag": [
+          {
+            "-k": "addr:housenumber",
+            "-v": "43"
+          },
+          {
+            "-k": "addr:postcode",
+            "-v": "21741"
+          },
+          {
+            "-k": "addr:street",
+            "-v": "Västra Rönneholmsvägen"
+          },
+          {
+            "-k": "amenity",
+            "-v": "cafe"
+          },
+          {
+            "-k": "cuisine",
+            "-v": "coffee_shop"
+          },
+          {
+            "-k": "name",
+            "-v": "Knus"
+          }
+        ]
+      },
+      {
+        "-id": "1669563673",
+        "-lat": "55.5963636",
+        "-lon": "12.9931805",
+        "tag": [
+          {
+            "-k": "addr:housenumber",
+            "-v": "26"
+          },
+          {
+            "-k": "addr:street",
+            "-v": "Östra Rönneholmsvägen"
+          },
+          {
+            "-k": "amenity",
+            "-v": "cafe"
+          },
+          {
+            "-k": "cuisine",
+            "-v": "coffee_shop"
+          },
+          {
+            "-k": "name",
+            "-v": "Systrar & Bröder"
+          }
+        ]
+      },
+      {
+        "-id": "1669565284",
+        "-lat": "55.5978852",
+        "-lon": "12.9974345",
+        "tag": [
+          {
+            "-k": "amenity",
+            "-v": "cafe"
+          },
+          {
+            "-k": "cuisine",
+            "-v": "coffee_shop"
+          },
+          {
+            "-k": "name",
+            "-v": "Bruno"
+          },
+          {
+            "-k": "wifi",
+            "-v": "yes"
+          }
+        ]
+      },
+      {
+        "-id": "1677335986",
+        "-lat": "55.6137560",
+        "-lon": "12.9909645",
+        "tag": [
+          {
+            "-k": "amenity",
+            "-v": "cafe"
+          },
+          {
+            "-k": "name",
+            "-v": "Bryggans bageri & café"
+          },
+          {
+            "-k": "shop",
+            "-v": "bakery"
+          }
+        ]
+      },
+      {
+        "-id": "1677336006",
+        "-lat": "55.6092820",
+        "-lon": "12.9998033",
+        "tag": [
+          {
+            "-k": "amenity",
+            "-v": "cafe"
+          },
+          {
+            "-k": "name",
+            "-v": "Café"
+          }
+        ]
+      },
+      {
+        "-id": "1677336035",
+        "-lat": "55.6094643",
+        "-lon": "13.0004214",
+        "tag": [
+          {
+            "-k": "amenity",
+            "-v": "cafe"
+          },
+          {
+            "-k": "name",
+            "-v": "Espresso House"
+          }
+        ]
+      },
+      {
+        "-id": "1677336094",
+        "-lat": "55.6154864",
+        "-lon": "12.9902665",
+        "tag": [
+          {
+            "-k": "amenity",
+            "-v": "cafe"
+          },
+          {
+            "-k": "name",
+            "-v": "Lighthouse café"
+          }
+        ]
+      },
+      {
+        "-id": "1677336174",
+        "-lat": "55.6086384",
+        "-lon": "12.9997726",
+        "tag": [
+          {
+            "-k": "amenity",
+            "-v": "cafe"
+          },
+          {
+            "-k": "internet_access",
+            "-v": "wlan"
+          },
+          {
+            "-k": "internet_access:fee",
+            "-v": "no"
+          },
+          {
+            "-k": "name",
+            "-v": "Starbucks"
+          }
+        ]
+      },
+      {
+        "-id": "1677336195",
+        "-lat": "55.6128624",
+        "-lon": "12.9746191",
+        "tag": [
+          {
+            "-k": "amenity",
+            "-v": "cafe"
+          },
+          {
+            "-k": "name",
+            "-v": "West Side La Marina"
+          },
+          {
+            "-k": "note",
+            "-v": "café & glassbar"
+          }
+        ]
+      },
+      {
+        "-id": "1685937003",
+        "-lat": "55.6126372",
+        "-lon": "12.9856568",
+        "tag": [
+          {
+            "-k": "amenity",
+            "-v": "cafe"
+          },
+          {
+            "-k": "contact:website",
+            "-v": "http://graffiticafe.se/index.php?ID=vastrahamnen"
+          },
+          {
+            "-k": "name",
+            "-v": "Graffiti"
+          },
+          {
+            "-k": "website",
+            "-v": "http://graffiticafe.se/index.php?ID=vastrahamnen"
+          }
+        ]
+      },
+      {
+        "-id": "1719418321",
+        "-lat": "55.5823076",
+        "-lon": "12.9292586",
+        "tag": [
+          {
+            "-k": "amenity",
+            "-v": "cafe"
+          },
+          {
+            "-k": "name",
+            "-v": "Limhamns kakbod & café"
+          }
+        ]
+      },
+      {
+        "-id": "1726889262",
+        "-lat": "55.5913132",
+        "-lon": "13.0075194",
+        "tag": [
+          {
+            "-k": "amenity",
+            "-v": "cafe"
+          },
+          {
+            "-k": "name",
+            "-v": "Coffee Point"
+          }
+        ]
+      },
+      {
+        "-id": "1726889429",
+        "-lat": "55.5890073",
+        "-lon": "13.0133896",
+        "tag": [
+          {
+            "-k": "amenity",
+            "-v": "cafe"
+          },
+          {
+            "-k": "fixme",
+            "-v": "Janets Café"
+          }
+        ]
+      },
+      {
+        "-id": "1855387943",
+        "-lat": "55.5969867",
+        "-lon": "13.0128191",
+        "tag": [
+          {
+            "-k": "addr:city",
+            "-v": "Malmö"
+          },
+          {
+            "-k": "addr:country",
+            "-v": "SE"
+          },
+          {
+            "-k": "addr:postcode",
+            "-v": "211 57"
+          },
+          {
+            "-k": "addr:street",
+            "-v": "S:t Knuts Torg 6A"
+          },
+          {
+            "-k": "amenity",
+            "-v": "cafe"
+          },
+          {
+            "-k": "cuisine",
+            "-v": "sandwich"
+          },
+          {
+            "-k": "name",
+            "-v": "S:t Knuts Bageri Konditori & Café"
+          },
+          {
+            "-k": "website",
+            "-v": "http://www.cafekartan.se/018006/Sankt_Knuts_Bageri_Konditori_%26_Caf%C3%A9/"
+          },
+          {
+            "-k": "wheelchair",
+            "-v": "limited"
+          },
+          {
+            "-k": "wifi",
+            "-v": "no"
+          }
+        ]
+      },
+      {
+        "-id": "2206415088",
+        "-lat": "55.6003358",
+        "-lon": "13.0010575",
+        "tag": [
+          {
+            "-k": "addr:housenumber",
+            "-v": "8"
+          },
+          {
+            "-k": "addr:postcode",
+            "-v": "211 43 Malmö"
+          },
+          {
+            "-k": "addr:street",
+            "-v": "Södra Förstadsgatan "
+          },
+          {
+            "-k": "amenity",
+            "-v": "cafe"
+          },
+          {
+            "-k": "cuisine",
+            "-v": "coffee_shop"
+          },
+          {
+            "-k": "name",
+            "-v": "Konditori Hollandia"
+          },
+          {
+            "-k": "website",
+            "-v": "hollandia.se"
+          }
+        ]
+      },
+      {
+        "-id": "2266095947",
+        "-lat": "55.5951054",
+        "-lon": "13.0169428",
+        "tag": [
+          {
+            "-k": "amenity",
+            "-v": "cafe"
+          },
+          {
+            "-k": "cuisine",
+            "-v": "vegetarian"
+          },
+          {
+            "-k": "diet:vegetarian",
+            "-v": "only"
+          },
+          {
+            "-k": "name",
+            "-v": "Chez Madame"
+          }
+        ]
+      },
+      {
+        "-id": "2282518881",
+        "-lat": "55.6069939",
+        "-lon": "13.0001217",
+        "tag": [
+          {
+            "-k": "amenity",
+            "-v": "cafe"
+          },
+          {
+            "-k": "name",
+            "-v": "Ambrosia café & konditori"
+          },
+          {
+            "-k": "shop",
+            "-v": "bakery"
+          }
+        ]
+      },
+      {
+        "-id": "2293728897",
+        "-lat": "55.6033151",
+        "-lon": "13.0004714",
+        "tag": [
+          {
+            "-k": "amenity",
+            "-v": "cafe"
+          },
+          {
+            "-k": "name",
+            "-v": "Bageri caféet"
+          },
+          {
+            "-k": "shop",
+            "-v": "bakery"
+          }
+        ]
+      },
+      {
+        "-id": "2293728898",
+        "-lat": "55.6044211",
+        "-lon": "13.0013958",
+        "tag": [
+          {
+            "-k": "amenity",
+            "-v": "cafe"
+          },
+          {
+            "-k": "name",
+            "-v": "Barista"
+          }
+        ]
+      },
+      {
+        "-id": "2293728923",
+        "-lat": "55.6045384",
+        "-lon": "13.0007246",
+        "tag": [
+          {
+            "-k": "amenity",
+            "-v": "cafe"
+          },
+          {
+            "-k": "name",
+            "-v": "Espresso House"
+          }
+        ]
+      },
+      {
+        "-id": "2293728924",
+        "-lat": "55.6053370",
+        "-lon": "12.9992508",
+        "tag": [
+          {
+            "-k": "amenity",
+            "-v": "cafe"
+          },
+          {
+            "-k": "name",
+            "-v": "Espresso House"
+          }
+        ]
+      },
+      {
+        "-id": "2293728966",
+        "-lat": "55.6051204",
+        "-lon": "12.9976717",
+        "tag": [
+          {
+            "-k": "amenity",
+            "-v": "cafe"
+          },
+          {
+            "-k": "cuisine",
+            "-v": "ice_cream"
+          },
+          {
+            "-k": "name",
+            "-v": "Lejonet & Björnen"
+          }
+        ]
+      },
+      {
+        "-id": "2293728973",
+        "-lat": "55.6034708",
+        "-lon": "12.9982482",
+        "tag": [
+          {
+            "-k": "amenity",
+            "-v": "cafe"
+          },
+          {
+            "-k": "name",
+            "-v": "Mad Miss Molly"
+          },
+          {
+            "-k": "shop",
+            "-v": "deli"
+          }
+        ]
+      },
+      {
+        "-id": "2293728993",
+        "-lat": "55.6050510",
+        "-lon": "12.9977269",
+        "tag": [
+          {
+            "-k": "amenity",
+            "-v": "cafe"
+          },
+          {
+            "-k": "name",
+            "-v": "Noir"
+          }
+        ]
+      },
+      {
+        "-id": "2293729008",
+        "-lat": "55.6054305",
+        "-lon": "12.9992358",
+        "tag": [
+          {
+            "-k": "amenity",
+            "-v": "cafe"
+          },
+          {
+            "-k": "name",
+            "-v": "Pronto"
+          }
+        ]
+      },
+      {
+        "-id": "2293729019",
+        "-lat": "55.6065697",
+        "-lon": "12.9989989",
+        "tag": [
+          {
+            "-k": "amenity",
+            "-v": "cafe"
+          },
+          {
+            "-k": "name",
+            "-v": "Stjärncaféet"
+          }
+        ]
+      },
+      {
+        "-id": "2308779884",
+        "-lat": "55.6107868",
+        "-lon": "12.9989232",
+        "tag": [
+          {
+            "-k": "amenity",
+            "-v": "cafe"
+          },
+          {
+            "-k": "name",
+            "-v": "Nellas café"
+          }
+        ]
+      },
+      {
+        "-id": "2402822589",
+        "-lat": "55.6066127",
+        "-lon": "13.0232230",
+        "tag": [
+          {
+            "-k": "amenity",
+            "-v": "cafe"
+          },
+          {
+            "-k": "cuisine",
+            "-v": "coffee_shop"
+          },
+          {
+            "-k": "name",
+            "-v": "Kahl's Te & Kaffe"
+          },
+          {
+            "-k": "phone",
+            "-v": "040-290812"
+          },
+          {
+            "-k": "website",
+            "-v": "www.kahls.se"
+          }
+        ]
+      },
+      {
+        "-id": "2408160477",
+        "-lat": "55.5948987",
+        "-lon": "13.0035411",
+        "tag": [
+          {
+            "-k": "amenity",
+            "-v": "cafe"
+          },
+          {
+            "-k": "entrance",
+            "-v": "yes"
+          },
+          {
+            "-k": "name",
+            "-v": "Espresso Maker"
+          }
+        ]
+      },
+      {
+        "-id": "2715586734",
+        "-lat": "55.6058600",
+        "-lon": "13.0044370",
+        "tag": [
+          {
+            "-k": "amenity",
+            "-v": "cafe"
+          },
+          {
+            "-k": "name",
+            "-v": "Cosmopolitan café"
+          }
+        ]
+      },
+      {
+        "-id": "2778216348",
+        "-lat": "55.6075538",
+        "-lon": "13.0169189",
+        "tag": [
+          {
+            "-k": "addr:city",
+            "-v": "Malmö"
+          },
+          {
+            "-k": "addr:housenumber",
+            "-v": "16"
+          },
+          {
+            "-k": "addr:postcode",
+            "-v": "21131"
+          },
+          {
+            "-k": "addr:street",
+            "-v": "Östra Förstadsgatan"
+          },
+          {
+            "-k": "amenity",
+            "-v": "cafe"
+          },
+          {
+            "-k": "name",
+            "-v": "Pixel K.a.f.e."
+          },
+          {
+            "-k": "website",
+            "-v": "http://pixelkafe.se/"
+          }
+        ]
+      }
+    ]
+  }
+}
